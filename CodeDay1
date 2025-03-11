@@ -1,1 +1,31 @@
 // code for day1 puzzle of AdventOfCode 2015
+
+#include <iostream>
+#include <fstream>
+
+int main() {
+
+  int acc = 0 ;
+
+  ifstream myFile ;
+  myFile.open( "InputDay1" ) ;
+
+  if( myFile.is_open() ) {
+
+    while( getchar( myFile , c ) ) {
+
+      if ( c == '(' ) {
+        acc++ ;
+      }
+      elseif ( c == ')' ) {
+        acc-- ;
+      }
+
+    }
+    myFile.close() ;
+
+  }
+
+  std::cout << acc << std::endl ;
+
+}
